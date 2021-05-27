@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <default sync-j="4" revision="hardknott"/>
+
+  <remote fetch="https://git.yoctoproject.org/git" name="yocto"/>
+  <remote fetch="https://github.com/openembedded" name="oe"/>
+  <remote fetch="https://github.com/lipro-yocto" name="lpy"/>
+
+  <project remote="yocto" name="poky" path="sources/poky"/>
+  <project remote="oe" name="meta-openembedded" path="sources/openembedded"/>
+
+  <project remote="lpy" name="nxschool-myprj" path="sources/myprj" revision="main">
+    <copyfile dest="README.md" src="README.md"/>
+    <copyfile dest="setup-environment" src="scripts/setup-environment"/>
+  </project>
+
+</manifest>
